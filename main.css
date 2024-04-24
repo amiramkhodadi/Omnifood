@@ -12,7 +12,26 @@ body {
   font-weight: 400;
   color: #555;
 }
-
+/* generalreusable componenttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt */
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+}
+.grid {
+  display: grid;
+  gap: 9.6rem;
+}
+.grid--2-col {
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid--3-col {
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid--4-col {
+  grid-template-columns: repeat(4, 1fr);
+}
+/* headerrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr */
 .header {
   display: flex;
   justify-content: space-between;
@@ -28,33 +47,39 @@ body {
   display: flex;
   list-style: none;
   gap: 3.2rem;
+  align-items: center;
 }
 .main-nav-link:link,
 .main-navlink:visited {
+  display: inline-block;
   text-decoration: none;
   color: #333;
   font-size: 1.8rem;
   font-weight: 500;
+  transition: all 0.3s;
 }
 .main-nav-link:hover,
 .main-navlink:active {
   color: #cf711f;
 }
-.nav-cta
+.main-nav-link.nav-cta:link,
+.main-nav-link.nav-cta:visited {
+  color: #fff;
+  padding: 1.2rem 2.4rem;
+  border-radius: 9px;
+  background-color: #e67e22;
+}
+.main-nav-link.nav-cta:hover,
+.main-nav-link.nav-cta:active {
+  background-color: #cf711f;
+}
 
-
-/* **
-*
-*
-*
-*
-** */
-/* ****************************hero section ****************************** */
-.section-hero {
+/* heroooooooooooooooooooooooooooooo sectioooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooon  */
+.sectionHero {
   background-color: #fdf2e9;
-  /* ******************************************************************* */
   padding: 4.8rem 0 9.6rem 0;
 }
+
 .hero {
   max-width: 130rem;
   margin: 0 auto;
@@ -64,13 +89,37 @@ body {
   gap: 9.6rem;
   align-items: center;
 }
-.heading-primary {
-  font-size: 5.2rem;
+.heading-primary,
+.heading-secondary,
+.heading-tertiary {
   font-weight: 700;
-  line-height: 1.05;
   color: #333;
   letter-spacing: -0.5px;
+}
+.heading-primary {
+  font-size: 5.2rem;
+  line-height: 1.05;
   margin-bottom: 3.2rem;
+}
+
+.heading-secondary {
+  font-size: 4.2rem;
+  line-height: 1.2rem;
+  margin-bottom: 9.6rem;
+}
+.heading-tertiary {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 3.2rem;
+}
+.subheading {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #cf711f;
+  text-transform: uppercase;
+  margin-bottom: 3.6rem;
+  letter-spacing: 0.75px;
 }
 .hero-description {
   font-size: 2rem;
@@ -140,4 +189,29 @@ body {
 }
 .margin-right-sm {
   margin-right: 1.6rem !important;
+}
+
+/* hoooooooooooooooooooooooooow it work sectionnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn */
+.section-how {
+  padding: 9.6rem 0;
+}
+.step-img-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.step-img {
+  width: 35%;
+}
+
+.step-number {
+  font-size: 8.6rem;
+  color: #ddd;
+  margin-bottom: 1.2rem;
+  font-weight: 600;
+}
+.step-description {
+  font-size: 1.8rem;
+  line-height: 1.6;
+  margin-bottom: 4.8rem;
 }
